@@ -4,7 +4,7 @@ import { StorageService } from '../../../auth/services/storage/storage.service';
 import { Observable } from 'rxjs';
 
 
-const BASIC_URL = ["http://localhost:9000"];
+const BASIC_URL = ["http://localhost:8080"];
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +17,7 @@ export class AdminService {
     return this.http.post(BASIC_URL + "/api/admin/car", carDto);
   }
 
-  updateCar(carId: number,carDto: any) {
+  updateCar(carId: number, carDto: any) {
     return this.http.put(BASIC_URL + "/api/admin/car/" + carId, carDto);
   }
 
